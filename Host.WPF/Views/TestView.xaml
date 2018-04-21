@@ -1,0 +1,33 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.TestView"
+        x:TypeArguments="vms:TestViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Book"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels;assembly=Book.ViewModels">
+    <StackPanel Orientation="Horizontal">
+        <Image
+            x:Name="resultImage"
+            Margin="5"
+            SnapsToDevicePixels="True"/>
+
+        <Label
+            x:Name="nameLabel"
+            VerticalAlignment="Center">
+            <TextBlock>
+                <TextBlock.Inlines>
+                    <Run
+                        x:Name="letterRun"
+                        FontSize="10"
+                        Foreground="{StaticResource DarkIdealForegroundDisabledBrush}"/>
+                    <Run
+                        Text=" "
+                        FontSize="2"/>
+                    <Run
+                        x:Name="nameRun"
+                        FontSize="14"/>
+                </TextBlock.Inlines>
+            </TextBlock>
+        </Label>
+    </StackPanel>
+</rxui:ReactiveUserControl>

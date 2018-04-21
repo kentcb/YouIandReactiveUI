@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>Book.ViewModels</AssemblyName>
+        <RootNamespace>Book.ViewModels</RootNamespace>
+        <TargetFrameworks>netstandard1.3;net47</TargetFrameworks>
+        <WarningsAsErrors>true</WarningsAsErrors>
+        <LangVersion>latest</LangVersion>
+
+        <!--
+        see https://github.com/dotnet/corefx/issues/9788
+        TODO: remove this once fully netstandard
+        -->
+        <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net47'">
+        <DefineConstants>$(DefineConstants);NETFX</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' != 'net47'">
+        <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' != 'net47'">
+        <Compile Remove="PerformanceSampleViewModel.cs" />
+        <Compile Remove="Samples/Chapter 23/**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Data\dinosaurs.json" />
+        <None Remove="Data\first_names.txt" />
+        <None Remove="Data\Images\stegosaurus.png" />
+        <None Remove="Data\Images\triceratops.png" />
+        <None Remove="Data\Images\tyrannosaurus_rex.png" />
+        <None Remove="Data\Images\world_map.gif" />
+        <None Remove="Data\last_names.txt" />
+        <None Remove="Data\museums.json" />
+        <None Remove="Data\scientists.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Data\*.json" />
+        <EmbeddedResource Include="Data\*.txt" />
+        <EmbeddedResource Include="Data\Images\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+        <PackageReference Include="Genesis.Ensure" Version="2.0.0" />
+        <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+        <PackageReference Include="Microsoft.Reactive.Testing" Version="3.1.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+        <PackageReference Include="PCLMock" Version="5.0.4-alpha" />
+        <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0113" />
+        <PackageReference Include="ReactiveUI.Testing" Version="8.0.0-alpha0113" />
+        <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
+        <PackageReference Include="System.Reactive" Version="3.1.1" />
+        <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+        <PackageReference Include="TweetinviAPI" Version="2.1.0" />
+        <PackageReference Include="xunit" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+        <PackageReference Include="BenchmarkDotNet" Version="0.10.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Utility\Utility.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="App.config">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

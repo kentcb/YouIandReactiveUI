@@ -1,0 +1,38 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter08.Sample16.RoarView"
+        x:TypeArguments="vms:RoarViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter08.Sample16;assembly=Book.ViewModels"
+        Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image
+            x:Name="image"
+            Grid.RowSpan="2"
+            Width="50"
+            Height="50"
+            Margin="3"/>
+        <TextBlock
+            x:Name="userNameTextBlock"
+            Grid.Column="1"
+            FontSize="10pt"
+            FontWeight="Bold"
+            Margin="3 2 0 0"/>
+        <TextBlock
+            x:Name="textTextBlock"
+            Grid.Row="1"
+            Grid.Column="1"
+            FontSize="10pt"
+            Margin="3 2 0 0"
+            TextWrapping="Wrap"/>
+    </Grid>
+</rxui:ReactiveUserControl>

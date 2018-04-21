@@ -1,0 +1,33 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.SampleWithChapterListItemView"
+        x:TypeArguments="vms:SampleWithChapterViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels;assembly=Book.ViewModels">
+    <Grid Margin="0 6 0 6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image
+            x:Name="sampleImage"
+            Width="20"
+            Height="20"/>
+        <TextBlock
+            Grid.Column="1"
+            Margin="8 0 0 0">
+            <TextBlock.Inlines>
+                <Run
+                    x:Name="numberRun"
+                    FontSize="10"
+                    Foreground="{StaticResource DarkIdealForegroundDisabledBrush}"/>
+                <Run
+                    Text=" "
+                    FontSize="2"/>
+                <Run
+                    x:Name="nameRun"
+                    FontSize="14"/>
+            </TextBlock.Inlines>
+        </TextBlock>
+    </Grid>
+</rxui:ReactiveUserControl>

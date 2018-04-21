@@ -1,0 +1,125 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter02.Sample01.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter02.Sample01;assembly=Book.ViewModels"
+        xmlns:local="clr-namespace:Book.Views.Samples.Chapter02.Sample01"
+        xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Focusable="True">
+
+    <UserControl.Resources>
+        <Style TargetType="Path">
+            <Setter Property="StrokeThickness" Value="0.25"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="Fill" Value="White"/>
+        </Style>
+    </UserControl.Resources>
+
+    <DockPanel
+        x:Name="root">
+        <Border
+            BorderThickness="0 0 1 0"
+            BorderBrush="#707070"
+            Background="{StaticResource HighlightBrush}"
+            SnapsToDevicePixels="True">
+            <Grid
+                DockPanel.Dock="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <xctk:DropDownButton
+                    BorderThickness="0 0 0 1">
+                    <xctk:DropDownButton.DropDownContent>
+                        <Border
+                            Background="White">
+                            <ListBox
+                                x:Name="illustrationsListBox">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <local:IllustrationView
+                                            ViewModel="{Binding .}"
+                                            Width="100"
+                                            Height="100"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Border>
+                    </xctk:DropDownButton.DropDownContent>
+
+                    <local:IllustrationView
+                        x:Name="selectedIllustration"
+                        Width="100"
+                        Height="100"/>
+                </xctk:DropDownButton>
+
+                <ListBox
+                    x:Name="paletteListBox"
+                    Grid.Row="1"
+                    Margin="0 5 0 5"
+                    Background="Transparent">
+                    <ListBox.Resources>
+                        <SolidColorBrush x:Key="AccentColorBrush" Color="{StaticResource AccentColor}" />
+                        <SolidColorBrush x:Key="AccentColorBrush2" Color="{StaticResource AccentColor}" />
+                        <SolidColorBrush x:Key="AccentColorBrush3" Color="{StaticResource AccentColor2}" />
+                    </ListBox.Resources>
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem" BasedOn="{StaticResource MetroListBoxItem}">
+                            <Setter Property="Margin" Value="0 0 0 6"/>
+                            <Setter Property="Padding" Value="20 0 0 0"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <local:PaletteEntryView ViewModel="{Binding .}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <CheckBox
+                    x:Name="showOutlineCheckBox"
+                    Grid.Row="2">
+                    Outline
+                </CheckBox>
+                <CheckBox
+                    x:Name="paintGroupsCheckBox"
+                    Grid.Row="3">
+                    Paint groups
+                </CheckBox>
+                <Button
+                    x:Name="clearButton"
+                    Grid.Row="4"
+                    Content="Clear"/>
+            </Grid>
+        </Border>
+
+        <xctk:Zoombox x:Name="zoombox">
+            <ItemsControl x:Name="pathsItemsControl">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas
+                            Width="{Binding SelectedIllustration.Width}"
+                            Height="{Binding SelectedIllustration.Height}"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:PathView ViewModel="{Binding .}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </xctk:Zoombox>
+    </DockPanel>
+</rxui:ReactiveUserControl>

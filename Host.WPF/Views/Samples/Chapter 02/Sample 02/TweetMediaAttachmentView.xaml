@@ -1,0 +1,11 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter02.Sample02.TweetMediaAttachmentView"
+        x:TypeArguments="vms:TweetMediaAttachmentViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter02.Sample02;assembly=Book.ViewModels"
+        Background="Transparent">
+    <Image
+        x:Name="image"
+        Margin="3"/>
+</rxui:ReactiveUserControl>

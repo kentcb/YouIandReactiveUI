@@ -1,0 +1,238 @@
+<UserControl x:Class="Book.Views.Advertising"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Book.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Background="{StaticResource HighlightBrush}"
+            SnapsToDevicePixels="True"/>
+        <Border
+            Grid.ColumnSpan="2"
+            Background="{StaticResource HighlightBrush}"
+            SnapsToDevicePixels="True"/>
+
+        <Grid
+            Grid.Row="1"
+            Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image
+                Source="/Resources/BookCover.png"
+                VerticalAlignment="Top"
+                Margin="40,0,40,20"
+                Width="350"/>
+
+            <Button
+                x:Name="buyButton"
+                Grid.Row="1"
+                Background="#F1C557"
+                BorderBrush="#7C652E"
+                Content="BUY THE BOOK"
+                FontSize="24"
+                Foreground="Black"
+                Margin="40,0,40,0"/>
+        </Grid>
+
+        <Label
+            Grid.Column="1"
+            FontWeight="Bold"
+            FontSize="50"
+            Typography.Capitals="SmallCaps"
+            Margin="10,15,10,15"
+            Foreground="White">
+            You, I, and ReactiveUI
+        </Label>
+
+        <FlowDocumentScrollViewer
+            Grid.RowSpan="2"
+            Grid.Row="1"
+            Grid.Column="1">
+            <FlowDocument
+                FontFamily="Segoe UI">
+                <FlowDocument.Resources>
+                    <Style TargetType="Paragraph">
+                        <Setter Property="FontSize" Value="22"/>
+                    </Style>
+                </FlowDocument.Resources>
+
+                <Paragraph>
+                    <Figure
+                        Margin="0"
+                        HorizontalAnchor="PageRight">
+                        <Paragraph>
+                            <Image
+                                Source="/Resources/KentBoogaart.jpg"
+                                Width="200"
+                                Margin="15,0,0,15"/>
+                        </Paragraph>
+                    </Figure><Run>Hello!</Run>
+                </Paragraph>
+                <Paragraph>
+                    <Run>
+                        I'm Kent, the author of these ReactiveUI code samples. You can choose a sample on the left to get started. However, before you do, I want to make sure you're aware of my book &#x2013;
+                    </Run>
+                    <Italic>You, I, and ReactiveUI</Italic>
+                    <Run>
+                        &#x2013; for which this code was written. Whilst I consider these samples useful in their own right, you will get
+                    </Run>
+                    <Italic>far</Italic>
+                    <Run>
+                        more value out of them by studying them in conjunction with the book.
+                    </Run>
+                </Paragraph>
+                <Paragraph>
+                    The book provides in-depth discussion on all things ReactiveUI, giving you the knowledge and understanding required to be highly effective
+                    with it. Whether you're new to ReactiveUI, or already proficient in it, I know you'll get a lot of value out of the book. To give you an
+                    idea of the content covered, here is the table of contents:
+                </Paragraph>
+                <Paragraph Margin="0">
+                    <Bold>Part 0: First Steps</Bold>
+                </Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>Introduction</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>A ReactiveUI Showcase</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Getting Started</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph Margin="0,10,0,0">
+                    <Bold>Part 1: Fundamentals</Bold>
+                </Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>Splat</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ReactiveObject</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>WhenAny and Friends</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ObservableAsPropertyHelper</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Reactive Commands</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Interactions</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Reactive Lists</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Message Bus</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph Margin="0,10,0,0">
+                    <Bold>Part 2: Platform Integration</Bold>
+                </Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>Events</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>IViewFor</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Bindings</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>View Location</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ViewModelViewHost</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>RoutedViewHost</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>WhenActivated</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Auto Persistence</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph Margin="0,10,0,0">
+                    <Bold>Part 3: Best Practices</Bold>
+                </Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>Composition</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Scheduling</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Error Handling</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Performance</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Testing</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Structure and Style</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph Margin="0,10,0,0">
+                    <Bold>Part 4: Appendices</Bold>
+                </Paragraph>
+                <List Margin="0">
+                    <ListItem>
+                        <Paragraph>Appendix A: Reactive Extensions Primer</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    On top of the extensive content and these fantastic code samples, I put a great deal of effort into typesetting the book. I think you'll
+                    agree that the result is a beautiful thing:
+                </Paragraph>
+                <Paragraph TextAlignment="Center">
+                    <Paragraph.Resources>
+                        <Style TargetType="Image">
+                            <Setter Property="Width" Value="400"/>
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                    </Paragraph.Resources>
+
+                    <Image Source="/Resources/BookPreview1.png"/>
+                    <Image Source="/Resources/BookPreview2.png"/>
+                    <Image Source="/Resources/BookPreview3.png"/>
+                    <Image Source="/Resources/BookPreview4.png"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run xml:space="preserve">Hopefully I've convinced you that my efforts to create the very best resource for ReactiveUI programmers was worth it. If you want to support me and my work, please </Run><Hyperlink x:Name="buyHyperlink">buy the book</Hyperlink><Run>. If not, that's OK. I hope you get some value out of these samples all the same.</Run>
+                </Paragraph>
+                <Paragraph>
+                    <Run>Regards,</Run><LineBreak/><Run>Kent</Run>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</UserControl>

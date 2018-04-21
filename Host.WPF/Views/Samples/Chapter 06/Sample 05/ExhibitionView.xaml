@@ -1,0 +1,9 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter06.Sample05.ExhibitionView"
+        x:TypeArguments="vms:ExhibitionViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter06.Sample05;assembly=Book.ViewModels">
+    <Label
+        x:Name="nameLabel"/>
+</rxui:ReactiveUserControl>

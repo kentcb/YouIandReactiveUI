@@ -1,0 +1,62 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter04.Sample02.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter04.Sample02;assembly=Book.ViewModels"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        b:Screenshot.Width="1202"
+        b:Screenshot.Height="743">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label
+            x:Name="nearestFossilDisplayLabel"/>
+        <ScrollViewer
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Image
+                    x:Name="worldMapImage"
+                    Stretch="None"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"/>
+                <Grid
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+                    <Ellipse
+                        x:Name="selectedPointIndicator"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Width="15"
+                        Height="15"
+                        Fill="Red"
+                        Stroke="White"
+                        StrokeThickness="1"
+                        IsHitTestVisible="False"/>
+                    <Rectangle
+                        x:Name="selectedAreaIndicator"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Stroke="White"
+                        Fill="#30ff0000"
+                        StrokeThickness="2"
+                        IsHitTestVisible="False"/>
+                    <Path
+                        x:Name="nearestFossilPath"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Stroke="White"
+                        StrokeThickness="1"
+                        Fill="Red"
+                        Data="m0,-7 l3,0 l5,5 l5,-5 l3,0 l0,3 l-5,5 l5,5 l0,3 l-3,0 l-5,-5 l-5,5 l-3,0 l0,-3 l5,-5 l-5,-5 z"
+                        IsHitTestVisible="False"/>
+                    <!--Data="m0,0 l15,15 m-15,0 l15,-15"-->
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</rxui:ReactiveUserControl>

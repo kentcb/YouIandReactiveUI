@@ -1,0 +1,88 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter04.Sample03.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter04.Sample03;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        b:Screenshot.Width="800"
+        b:Screenshot.Height="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView
+            x:Name="dinosaursListView"
+            VirtualizingStackPanel.IsVirtualizing="True"
+            VirtualizingStackPanel.VirtualizationMode="Recycling"
+            ScrollViewer.CanContentScroll="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <rxui:ViewModelViewHost
+                        ViewModel="{Binding}"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ItemsControl
+            x:Name="colorKeyItemsControl"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Margin="0 4 0 4">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="1"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <rxui:ViewModelViewHost
+                        ViewModel="{Binding}"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel
+            Grid.Column="1"
+            Background="{StaticResource AccentColorBrush4}">
+            <CheckBox
+                x:Name="isCachingEnabledCheckBox"
+                Content="Enable caching"/>
+            <CheckBox
+                x:Name="isDataOrderCacheFriendlyCheckBox"
+                Content="Order data in a cache-friendly manner"/>
+            <CheckBox
+                x:Name="isFakeDelayImposedCheckBox"
+                Content="Include a fake delay when creating resources"/>
+            <Label>
+                <TextBlock>
+                    <Run x:Name="resourcesRequestedRun"/>
+                    <Run Text="resources requested."/>
+                </TextBlock>
+            </Label>
+            <Label>
+                <TextBlock>
+                    <Run x:Name="resourcesCreatedRun"/>
+                    <Run Text="resources created."/>
+                </TextBlock>
+            </Label>
+            <Label>
+                <TextBlock>
+                    <Run x:Name="resourcesReleasedRun"/>
+                    <Run Text="resources released."/>
+                </TextBlock>
+            </Label>
+        </StackPanel>
+    </Grid>
+</rxui:ReactiveUserControl>

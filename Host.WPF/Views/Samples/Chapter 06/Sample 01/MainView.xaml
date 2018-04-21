@@ -1,0 +1,14 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter06.Sample01.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter06.Sample01;assembly=Book.ViewModels">
+    <StackPanel>
+        <TextBox
+            x:Name="nameTextBox"/>
+
+        <Label
+            x:Name="messageLabel"/>
+    </StackPanel>
+</rxui:ReactiveUserControl>

@@ -1,0 +1,137 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter02.Sample02.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter02.Sample02;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        xmlns:local="clr-namespace:Book.Views.Samples.Chapter02.Sample02"
+        Focusable="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Background="{StaticResource HighlightBrush}">
+            <DockPanel
+                DockPanel.Dock="Top">
+                <Button
+                x:Name="filterButton"
+                    DockPanel.Dock="Right"
+                    Width="{Binding Path=(ma:ControlsHelper.ButtonWidth), RelativeSource={RelativeSource Self}}"
+                    Template="{StaticResource FilterButtonTemplate}"
+                    BorderBrush="{StaticResource TextBoxBorderBrush}"
+                    BorderThickness="0 1 1 1"
+                    Padding="1"
+                    Margin="0">
+                    <Image
+                        Source="/Resources/Filter.png"/>
+                </Button>
+                <TextBox
+                    x:Name="queryTextBox"
+                    ma:TextBoxHelper.Watermark="Filter"
+                    ma:TextBoxHelper.ClearTextButton="True"
+                    BorderThickness="0 1 1 1"
+                    Margin="0"/>
+            </DockPanel>
+
+            <Grid>
+                <ItemsControl
+                    x:Name="tweetsItemsControl"
+                    VirtualizingStackPanel.IsVirtualizing="True"
+                    VirtualizingStackPanel.VirtualizationMode="Recycling"
+                    Style="{StaticResource VirtualizedItemsControl}"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:TweetView ViewModel="{Binding .}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <ma:ProgressRing
+                    x:Name="progressRing"/>
+            </Grid>
+        </DockPanel>
+
+        <GridSplitter
+            Grid.Column="1"
+            Width="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch"/>
+
+        <Grid
+            Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox
+                x:Name="tweetTextTextBox"
+                Grid.ColumnSpan="2"
+                TextWrapping="Wrap"
+                AcceptsReturn="True"
+                AcceptsTab="True"
+                MinLines="5"
+                Margin="5 5 5 0"/>
+            <Label
+                x:Name="tweetTextCharactersRemainingLabel"
+                Grid.Row="1"
+                Margin="5 0 0 0"
+                Padding="0"/>
+            <Button
+                x:Name="tweetButton"
+                Grid.Row="1"
+                Grid.Column="1"
+                Content="Tweet"/>
+            <local:CancelView
+                x:Name="cancelView"
+                Grid.Row="1"
+                Grid.Column="1"/>
+            <ItemsControl
+                x:Name="attachmentsItemsControl"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                MaxHeight="100">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid MaxWidth="150" MaxHeight="150">
+                            <local:TweetMediaAttachmentView ViewModel="{Binding .}"/>
+                            <Button
+                                x:Name="removeButton"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Style="{StaticResource MetroCircleButtonStyle}"
+                                Margin="0 5 5 0"
+                                Command="{Binding DataContext.RemoveAttachmentCommand, ElementName=attachmentsItemsControl}"
+                                CommandParameter="{Binding .}">
+                                <Button.Content>
+                                    <Image
+                                        SnapsToDevicePixels="True"
+                                        Source="/Resources/Delete.png"
+                                        Width="20"
+                                        Height="20"/>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </Grid>
+</rxui:ReactiveUserControl>

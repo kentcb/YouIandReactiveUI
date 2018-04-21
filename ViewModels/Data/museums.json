@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Natural History Museum",
+        "location": "London"
+    },
+    {
+        "name": "Grant Museum of Zoology",
+        "location": "London"
+    },
+    {
+        "name": "Ulster Museum",
+        "location": "Belfast"
+    },
+    {
+        "name": "Australian Museum",
+        "location": "Sydney"
+    },
+    {
+        "name": "Queensland Museum",
+        "location": "Brisbane"
+    },
+    {
+        "name": "South Australian Museum",
+        "location": "Adelaide"
+    },
+    {
+        "name": "The Crystal Caves",
+        "location": "Queensland"
+    },
+    {
+        "name": "Muzium Negara",
+        "location": "Kuala Lumpur"
+    },
+    {
+        "name": "Lee Kong Chian Natural History Museum",
+        "location": "Singapore"
+    },
+    {
+        "name": "Dinosauria",
+        "location": "Esp�raza"
+    }
+]

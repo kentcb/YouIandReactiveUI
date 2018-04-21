@@ -1,0 +1,17 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter14.Sample09.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter14.Sample09;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <StackPanel>
+        <TextBox
+            x:Name="timeTextBox"
+            ma:TextBoxHelper.Watermark="Enter the time your dinosaur exhibition begins"/>
+        <Label
+            x:Name="displayLabel"/>
+    </StackPanel>
+</rxui:ReactiveUserControl>

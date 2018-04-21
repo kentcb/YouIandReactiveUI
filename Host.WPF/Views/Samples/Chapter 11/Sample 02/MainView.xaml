@@ -1,0 +1,63 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter11.Sample02.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter11.Sample02;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid
+            Grid.Column="1"
+            Background="{StaticResource AccentColorBrush4}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Content="Room:"
+                VerticalAlignment="Center"/>
+            <TextBox
+                x:Name="roomTextBox"
+                Grid.Column="1"/>
+
+            <Label
+                Grid.Row="1"
+                Content="User:"
+                VerticalAlignment="Center"/>
+            <TextBox
+                x:Name="userTextBox"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Button
+                x:Name="startChatButton"
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="Start Chat"/>
+        </Grid>
+
+        <ScrollViewer
+            VerticalScrollBarVisibility="Auto"
+            HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl
+                x:Name="chatsItemsControl"
+                Focusable="False"/>
+        </ScrollViewer>
+    </Grid>
+</rxui:ReactiveUserControl>

@@ -1,0 +1,15 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter11.Sample01.ChatMessageView"
+        x:TypeArguments="vms:ChatMessageViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter11.Sample01;assembly=Book.ViewModels">
+    <StackPanel Orientation="Horizontal">
+        <Label Foreground="Gray" Width="50">
+            <Label.Content>
+                <TextBlock x:Name="userTextBlock" TextTrimming="CharacterEllipsis"/>
+            </Label.Content>
+        </Label>
+        <Label x:Name="messageLabel"/>
+    </StackPanel>
+</rxui:ReactiveUserControl>

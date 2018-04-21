@@ -1,0 +1,20 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter09.Sample03.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter09.Sample03;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <StackPanel>
+        <CheckBox
+            x:Name="donGlassesCheckBoxes"
+            Content="Don your glasses"/>
+        <Button
+            x:Name="spotDinosaurButton"
+            Content="Look For A Dinosaur"/>
+        <Label
+            x:Name="spottedDinosaurLabel"/>
+    </StackPanel>
+</rxui:ReactiveUserControl>

@@ -1,0 +1,12 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter17.Sample01.BlurbView"
+        x:TypeArguments="vms:BlurbViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter17.Sample01;assembly=Book.ViewModels">
+    <Label>
+        <TextBlock TextWrapping="Wrap">
+            My favorite dinosaur is the <Hyperlink x:Name="favoriteDinosaurHyperlink">Spinosaurus</Hyperlink>, and my pick for most inspirational scientist is <Hyperlink x:Name="favoriteScientistHyperlink">Richard Dawkins</Hyperlink>.
+        </TextBlock>
+    </Label>
+</rxui:ReactiveUserControl>

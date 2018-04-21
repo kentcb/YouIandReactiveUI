@@ -1,0 +1,49 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter02.Sample01.PaletteEntryView"
+        x:TypeArguments="vms:PaletteEntryViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter02.Sample01;assembly=Book.ViewModels"
+        xmlns:local="clr-namespace:Book.Views.Samples.Chapter02.Sample01"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            x:Name="swatch"
+            BorderBrush="#707070"
+            BorderThickness="1 1 0 1"
+            MinHeight="30"/>
+
+        <xctk:DropDownButton
+            Grid.Column="1"
+            Padding="0"
+            BorderThickness="1 1 0 1">
+            <xctk:DropDownButton.DropDownContent>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <xctk:ColorCanvas
+                        x:Name="colorColorCanvas"
+                        UsingAlphaChannel="False"/>
+
+                    <ListBox
+                        x:Name="textureListBox"
+                        Grid.Column="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:TextureView ViewModel="{Binding .}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </xctk:DropDownButton.DropDownContent>
+        </xctk:DropDownButton>
+    </Grid>
+</rxui:ReactiveUserControl>

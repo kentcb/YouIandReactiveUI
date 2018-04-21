@@ -1,0 +1,61 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter19.Sample02.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter19.Sample02;assembly=Book.ViewModels"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        b:Screenshot.Width="350"
+        b:Screenshot.Height="150">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Content="Name of your pet dinosaur:"
+            VerticalAlignment="Center"/>
+
+        <TextBox
+            x:Name="nameTextBox"
+            Grid.Column="1"/>
+
+        <Label
+            Content="Weight of your pet dinosaur:"
+            Grid.Row="1"
+            VerticalAlignment="Center"/>
+
+        <TextBox
+            x:Name="weightTextBox"
+            Grid.Row="1"
+            Grid.Column="2"/>
+
+        <Label
+            Content="Anything you enter here will not be saved:"
+            Grid.Row="2"
+            VerticalAlignment="Center"/>
+
+        <TextBox
+            x:Name="transientTextBox"
+            Grid.Row="2"
+            Grid.Column="2"/>
+
+        <Label
+            Grid.Row="3">
+            <Label.Content>
+                <TextBlock>
+                    <Run Text="View model has been saved "/>
+                    <Run x:Name="saveCountRun"/>
+                    <Run Text=" times."/>
+                </TextBlock>
+            </Label.Content>
+        </Label>
+    </Grid>
+</rxui:ReactiveUserControl>

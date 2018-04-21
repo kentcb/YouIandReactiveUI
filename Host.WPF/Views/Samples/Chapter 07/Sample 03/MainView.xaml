@@ -1,0 +1,18 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter07.Sample03.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter07.Sample03;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <Label
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        FontSize="16">
+        <Label.Content>
+            <TextBlock x:Name="messageTextBlock"/>
+        </Label.Content>
+    </Label>
+</rxui:ReactiveUserControl>

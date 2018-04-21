@@ -1,0 +1,60 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter10.Sample06.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter10.Sample06;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        xmlns:local="clr-namespace:Book.Views.Samples.Chapter10.Sample06"
+        b:Screenshot.Width="500"
+        b:Screenshot.Height="400"
+        Focusable="True">
+    <DockPanel
+        x:Name="panel">
+        <TextBox
+            x:Name="filterTextBox"
+            DockPanel.Dock="Top"
+            ma:TextBoxHelper.Watermark="Type to filter"/>
+        <StackPanel
+            DockPanel.Dock="Right"
+            Background="{StaticResource AccentColorBrush4}">
+            <Label
+                Content="Top 10"
+                FontWeight="Bold"
+                FontSize="14"/>
+            <ItemsControl
+                x:Name="voteCountsItemControl">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding Display}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <DataGrid
+            x:Name="dataGrid"
+            AutoGenerateColumns="False"
+            CanUserSortColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="nameColumn" Header="Name" IsReadOnly="True" Binding="{Binding Name}"/>
+                <DataGridTextColumn x:Name="dinosaurNameColumn" Header="Dinosaur Name" IsReadOnly="True" Binding="{Binding DinosaurName}"/>
+                <DataGridTextColumn x:Name="dinosaurDietColumn" Header="Dinosaur Diet" IsReadOnly="True" Binding="{Binding DinosaurDiet}"/>
+            </DataGrid.Columns>
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+                    <EventSetter Event="Click" Handler="HeaderClick"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow" BasedOn="{StaticResource MetroDataGridRow}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsNew}" Value="True">
+                            <Setter Property="Background" Value="#108020"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+    </DockPanel>
+</rxui:ReactiveUserControl>

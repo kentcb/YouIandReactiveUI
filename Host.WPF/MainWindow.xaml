@@ -1,0 +1,47 @@
+<ma:MetroWindow x:Class="Book.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Book"
+        xmlns:views="clr-namespace:Book.Views"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:vms="clr-namespace:Book.ViewModels;assembly=Book.ViewModels"
+        Title="{Binding Title}"
+        WindowState="Maximized"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1">
+    <ma:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Border Padding="2">
+                <Image
+                    SnapsToDevicePixels="True"
+                    Source="/Resources/Book.png"/>
+            </Border>
+        </DataTemplate>
+    </ma:MetroWindow.IconTemplate>
+
+    <Window.DataContext>
+        <vms:BookViewModel/>
+    </Window.DataContext>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Edit">
+                <MenuItem
+                    x:Name="enableScreenshotModeMenuItem"
+                    Header="_Enable Screenshot Mode"
+                    IsCheckable="True"/>
+                <MenuItem
+                    Header="_Screenshot Sample"
+                    Command="local:Commands.ScreenshotSample"/>
+                <Separator/>
+                <MenuItem
+                    Header="Force _Garbage Collection"
+                    Command="{Binding ForceGCCommand}"/>
+            </MenuItem>
+        </Menu>
+        <views:BookView ViewModel="{Binding}"/>
+    </DockPanel>
+</ma:MetroWindow>

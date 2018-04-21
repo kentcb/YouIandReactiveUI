@@ -1,0 +1,1179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BE08808-6A9C-422C-831E-D5395FA3519B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Book</RootNamespace>
+    <AssemblyName>Book</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Behaviors\Position.cs" />
+    <Compile Include="Behaviors\Screenshot.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Registrations.cs" />
+    <Compile Include="UserControlExtensions.cs" />
+    <Compile Include="Views\Advertising.xaml.cs">
+      <DependentUpon>Advertising.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookView.xaml.cs">
+      <DependentUpon>BookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 02\TweetMediaAttachmentView.xaml.cs">
+      <DependentUpon>TweetMediaAttachmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 02\TweetView.xaml.cs">
+      <DependentUpon>TweetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 02\CancelView.xaml.cs">
+      <DependentUpon>CancelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\Extensions.cs" />
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\PathView.xaml.cs">
+      <DependentUpon>PathView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\TextureView.xaml.cs">
+      <DependentUpon>TextureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\PaletteEntryView.xaml.cs">
+      <DependentUpon>PaletteEntryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\IllustrationView.xaml.cs">
+      <DependentUpon>IllustrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 02\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestSampleView.xaml.cs">
+      <DependentUpon>TestSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsoleSampleView.xaml.cs">
+      <DependentUpon>ConsoleSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SampleHostView.xaml.cs">
+      <DependentUpon>SampleHostView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChapterView.xaml.cs">
+      <DependentUpon>ChapterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 07\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 07\Sample 04\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 07\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 07\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 06\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 12\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 11\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 08\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 07\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 16\RoarView.xaml.cs">
+      <DependentUpon>RoarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 16\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 10\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 17\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 09\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 15\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 13\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 14\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 08\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 05\ExhibitionView.xaml.cs">
+      <DependentUpon>ExhibitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 08\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 06\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 07\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 05\Sample 05\AgeView.xaml.cs">
+      <DependentUpon>AgeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 05\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 05\Sample 01\AgeView.xaml.cs">
+      <DependentUpon>AgeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 05\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 01\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 03\ColorKeyView.xaml.cs">
+      <DependentUpon>ColorKeyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 03\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 04\DinosaurExhibitionView.xaml.cs">
+      <DependentUpon>DinosaurExhibitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 04\ListExhibitionsView.xaml.cs">
+      <DependentUpon>ListExhibitionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 04\RegisterExhibitionView.xaml.cs">
+      <DependentUpon>RegisterExhibitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 04\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 06\UndoView.xaml.cs">
+      <DependentUpon>UndoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 06\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 04\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 09\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 06\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 02\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 10\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 02\ChatMessageView.xaml.cs">
+      <DependentUpon>ChatMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 02\ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 01\ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 01\ChatMessageView.xaml.cs">
+      <DependentUpon>ChatMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 11\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 12\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 15\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 14\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 13\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 12\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 11\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 10\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 09\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 08\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 07\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 06\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 14\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 15\Sample 02\DetailsView.xaml.cs">
+      <DependentUpon>DetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 15\Sample 02\ImageView.xaml.cs">
+      <DependentUpon>ImageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 15\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 15\Sample 01\CountdownView.xaml.cs">
+      <DependentUpon>CountdownView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 15\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 01\CountdownView.xaml.cs">
+      <DependentUpon>CountdownView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 04\DinosaurListItemView.xaml.cs">
+      <DependentUpon>DinosaurListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 04\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 03\DinosaurListItemView.xaml.cs">
+      <DependentUpon>DinosaurListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 03\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 02\HerbivoreDinosaurView.xaml.cs">
+      <DependentUpon>HerbivoreDinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 02\OmnivoreDinosaurView.xaml.cs">
+      <DependentUpon>OmnivoreDinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 02\CarnivoreDinosaurView.xaml.cs">
+      <DependentUpon>CarnivoreDinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 16\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 01\BlurbView.xaml.cs">
+      <DependentUpon>BlurbView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 01\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 01\ScientistView.xaml.cs">
+      <DependentUpon>ScientistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\DinosaursView.xaml.cs">
+      <DependentUpon>DinosaursView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\MuseumsView.xaml.cs">
+      <DependentUpon>MuseumsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\DinosaurView.xaml.cs">
+      <DependentUpon>DinosaurView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\MuseumView.xaml.cs">
+      <DependentUpon>MuseumView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\ScientistView.xaml.cs">
+      <DependentUpon>ScientistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\ScientistsView.xaml.cs">
+      <DependentUpon>ScientistsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\TopicsView.xaml.cs">
+      <DependentUpon>TopicsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 17\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 06\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 06\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 05\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 05\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 04\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 04\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 03\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 03\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 02\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 01\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 18\Sample 05\ForcibleActivationForViewFetcher.cs" />
+    <Compile Include="Views\Samples\Chapter 18\Sample 05\IForcibleActivationForViewFetcher.cs" />
+    <Compile Include="Views\Samples\Chapter 19\Sample 02\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Samples\Chapter 19\Sample 01\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SampleWithChapterListItemView.xaml.cs">
+      <DependentUpon>SampleWithChapterListItemView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Advertising.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 02\TweetMediaAttachmentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 02\TweetView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 02\CancelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 01\PathView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 01\TextureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 01\PaletteEntryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 01\IllustrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\Samples\Chapter 02\Sample 01\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\TestView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TestSampleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConsoleSampleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SampleHostView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChapterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Samples\Chapter 07\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 07\Sample 04\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 07\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 07\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 06\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 12\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 11\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 08\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 07\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 16\RoarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 16\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 10\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 17\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 09\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 15\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 13\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 14\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 08\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 05\ExhibitionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 08\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 06\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 07\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 05\Sample 05\AgeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 05\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 05\Sample 01\AgeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 05\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 01\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 02\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 03\ColorKeyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 03\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 04\DinosaurExhibitionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 04\ListExhibitionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 04\RegisterExhibitionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 04\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 06\UndoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 06\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 04\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 09\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 06\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 02\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 10\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 02\ChatMessageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 02\ChatView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 01\ChatView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 01\ChatMessageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 11\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 12\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 15\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 14\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 13\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 12\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 11\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 10\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 09\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 08\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 07\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 06\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 14\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 15\Sample 02\DetailsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 15\Sample 02\ImageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 15\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 15\Sample 01\CountdownView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 15\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 01\CountdownView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 01\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 04\DinosaurListItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 04\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 03\DinosaurListItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 03\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 02\HerbivoreDinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 02\OmnivoreDinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 02\CarnivoreDinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 16\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 01\BlurbView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 01\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 01\ScientistView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\DinosaursView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\MuseumsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\DinosaurView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\MuseumView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\ScientistView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\ScientistsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\TopicsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 17\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 06\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 06\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 05\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 05\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 04\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 04\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 03\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 03\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 02\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 01\ChildView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 18\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 19\Sample 02\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Samples\Chapter 19\Sample 01\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SampleWithChapterListItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj">
+      <Project>{bccb6f46-5fb0-4217-9dbb-79a60d03a9f9}</Project>
+      <Name>ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.2.0" />
+    <PackageReference Include="MahApps.Metro" Version="1.2.4" />
+    <PackageReference Include="MahApps.Metro.Resources" Version="0.6.1" />
+    <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0113" />
+    <PackageReference Include="ReactiveUI.WPF" Version="8.0.0-alpha0113" />
+    <PackageReference Include="ReactiveUI.Events.WPF" Version="8.0.0-alpha0113" />
+    <PackageReference Include="System.Reactive" Version="3.1.1" />
+    <PackageReference Include="ToastNotifications.Messages" Version="2.2.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ConsoleSample.png" />
+    <Resource Include="Resources\ExecutingStatus.png" />
+    <Resource Include="Resources\FailureStatus.png" />
+    <Resource Include="Resources\SuccessStatus.png" />
+    <Resource Include="Resources\TestSample.png" />
+    <Resource Include="Resources\UISample.png" />
+    <Resource Include="Resources\UnknownStatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ViewModels.png" />
+    <Resource Include="Resources\Views.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PerformanceSample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ReptileSkinTexture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SpeckleTexture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\KentBoogaart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BookPreview1.png" />
+    <Resource Include="Resources\BookPreview2.png" />
+    <Resource Include="Resources\BookPreview3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BookPreview4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BookCover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BookSmall.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

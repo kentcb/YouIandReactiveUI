@@ -1,0 +1,28 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter10.Sample02.DinosaurView"
+        x:TypeArguments="vms:DinosaurViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter10.Sample02;assembly=Book.ViewModels"
+        Background="Transparent">
+    <Grid
+        Margin="0,8,0,8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock
+            x:Name="nameTextBlock"
+            FontSize="12pt"
+            FontWeight="Bold"
+            VerticalAlignment="Top"/>
+        <ma:NumericUpDown
+            x:Name="fossilCountNumericUpDown"
+            Grid.Column="1"/>
+    </Grid>
+</rxui:ReactiveUserControl>

@@ -1,0 +1,12 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter04.Sample04.ListExhibitionsView"
+        x:TypeArguments="vms:ListExhibitionsViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter04.Sample04;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors">
+    <ListView
+        x:Name="exhibitionsListView">
+    </ListView>
+</rxui:ReactiveUserControl>

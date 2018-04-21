@@ -1,0 +1,46 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter18.Sample04.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter18.Sample04;assembly=Book.ViewModels">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <UniformGrid>
+            <Button x:Name="loadLeftChildButton">Load Left Child</Button>
+            <Button x:Name="unloadLeftChildButton">Unload Left Child</Button>
+        </UniformGrid>
+        <UniformGrid Grid.Column="1">
+            <Button x:Name="loadRightChildButton">Load Right Child</Button>
+            <Button x:Name="unloadRightChildButton">Unload Right Child</Button>
+        </UniformGrid>
+
+        <rxui:ViewModelViewHost
+            x:Name="leftChildViewModelViewHost"
+            Grid.Row="1"
+            HorizontalContentAlignment="Center"/>
+        <rxui:ViewModelViewHost
+            x:Name="rightChildViewModelViewHost"
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalContentAlignment="Center"/>
+
+        <TextBox
+            x:Name="messagesTextBox"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            IsReadOnly="True"
+            MinHeight="100"
+            VerticalScrollBarVisibility="Visible"
+            HorizontalScrollBarVisibility="Auto"/>
+    </Grid>
+</rxui:ReactiveUserControl>

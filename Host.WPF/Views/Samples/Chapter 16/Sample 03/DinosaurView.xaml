@@ -1,0 +1,31 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter16.Sample03.DinosaurView"
+        x:TypeArguments="vms:DinosaurViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter16.Sample03;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            x:Name="nameLabel"
+            FontSize="28"
+            FontWeight="Bold"/>
+
+        <Label
+            x:Name="eraLabel"
+            Grid.Row="1"/>
+        <Label
+            x:Name="periodLabel"
+            Grid.Row="2"/>
+    </Grid>
+</rxui:ReactiveUserControl>

@@ -1,0 +1,590 @@
+[
+    {
+        "name": "Eryops",
+        "era": "Palaeozoic",
+        "period": "Permian",
+        "diet": "Carnivore",
+        "image_resource_name": "Eryops"
+    },
+    {
+        "name": "Gerrothorax",
+        "era": "Palaeozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Dimetrodon",
+        "era": "Palaeozoic",
+        "period": "Carboniferous",
+        "diet": "Carnivore",
+        "image_resource_name": "Dimetrodon"
+    },
+    {
+        "name": "Edaphosaurus",
+        "era": "Palaeozoic",
+        "period": "Carboniferous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Ichthyosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore",
+        "image_resource_name": "Ichthyosaurus"
+    },
+    {
+        "name": "Elasmosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Kronosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Tylosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Mosasaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Ophyhalmosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Plesiosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Nothosaurus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Liopleurodon",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Shonisaurus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Gigantosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Deinonychus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Baryonyx",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Compsognathus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Dromaeosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore",
+        "image_resource_name": "Dromaeosaurus"
+    },
+    {
+        "name": "Velociraptor",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore",
+        "image_resource_name": "Velociraptor"
+    },
+    {
+        "name": "Oviraptor Philoceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Omnivore",
+        "image_resource_name":  "Oviraptor Philoceratops"
+    },
+    {
+        "name": "Acrocanthosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Allosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Saurornithoides",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Carnotaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore",
+        "image_resource_name": "Carnotaurus"
+    },
+    {
+        "name": "Spinosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore",
+        "image_resource_name": "Spinosaurus"
+    },
+    {
+        "name": "Megalosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Troodon",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Eoraptor",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Coelurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Coelophysis",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Charcharodontosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Procompsognathus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Herrerasaurus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Saltopus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Brachiosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Argentinosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Diplodocus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore",
+        "image_resource_name": "Diplodocus"
+    },
+    {
+        "name": "Apatosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Seismosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Hadrosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore",
+        "image_resource_name": "Hadrosaurus"
+    },
+    {
+        "name": "Melanorosaurus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Saltosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Titanosaur",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore",
+        "image_resource_name": "Titanosaur"
+    },
+    {
+        "name": "Camarasaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Ultrasaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Ankylosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Kentrosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore",
+        "image_resource_name": "Kentrosaurus"
+    },
+    {
+        "name": "Edmontonia",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Scelidosaurus",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Scutellosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Nodosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Minmi",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Panoplosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Huayangosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Triceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore",
+        "image_resource_name": "Triceratops"
+    },
+    {
+        "name": "Protoceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Arrhinoceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Microceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Leptoceratops",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Stygimoloch",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Centrosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Styracosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Psittacosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Iguanodon",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Gallimimus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Omnivore",
+        "image_resource_name": "Gallimimus"
+    },
+    {
+        "name": "Drinker",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Leaellynasaura",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Camptosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Hypsilophodon",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Thescelosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Tenontosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Othnielia",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Altihinus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Dryosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Orodromeus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Corythosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore",
+        "image_resource_name": "Corythosaurus"
+    },
+    {
+        "name": "Maiasaura",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Edmontosaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Parasaurolophus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Gryposaurus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Hypacrosaurua",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Herbivore"
+    },
+    {
+        "name": "Dimorphodon",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Caudipteryx",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Archaeopteryx",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore",
+        "image_resource_name": "Archaeopteryx"
+    },
+    {
+        "name": "Pteranodon Ingens",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Hesperornis",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Rhamphoryncus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Pterosaur",
+        "era": "Mesozoic",
+        "period": "Triassic",
+        "diet": "Carnivore",
+        "image_resource_name": "Pterosaur"
+    },
+    {
+        "name": "Quetzalcoatlus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Tropeognathus",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "diet": "Carnivore"
+    },
+    {
+        "name": "Tyrannosaurus rex",
+        "era": "Mesozoic",
+        "period": "Cretaceous",
+        "fossil_locations": [
+            "200.5,288.86",
+            "222.5,295.86",
+            "213.5,290.86",
+            "204.5,284.86"
+        ],
+        "diet": "Carnivore",
+        "image_resource_name": "Tyrannosaurus"
+    },
+    {
+        "name": "Stegosaurus",
+        "era": "Mesozoic",
+        "period": "Jurassic",
+        "fossil_locations": [
+            "207.5,318.86",
+            "222.5,324.86",
+            "198.5,304.86"
+        ],
+        "diet": "Herbivore",
+        "image_resource_name": "Stegosaurus"
+    }
+]

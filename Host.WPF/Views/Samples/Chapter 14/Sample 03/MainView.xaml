@@ -1,0 +1,20 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter14.Sample03.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter14.Sample03;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <Label
+            Content="The time on the dino-clock is:"/>
+        <TextBlock
+            x:Name="timeTextBlock"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"/>
+    </StackPanel>
+</rxui:ReactiveUserControl>

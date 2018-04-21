@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{BCCB6F46-5FB0-4217-9DBB-79A60D03A9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.WPF", "Host.WPF\Host.WPF.csproj", "{7BE08808-6A9C-422C-831E-D5395FA3519B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{8101413C-546C-418A-B4C2-60C2B0FB6816}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCCB6F46-5FB0-4217-9DBB-79A60D03A9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCB6F46-5FB0-4217-9DBB-79A60D03A9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCB6F46-5FB0-4217-9DBB-79A60D03A9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCB6F46-5FB0-4217-9DBB-79A60D03A9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE08808-6A9C-422C-831E-D5395FA3519B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE08808-6A9C-422C-831E-D5395FA3519B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE08808-6A9C-422C-831E-D5395FA3519B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE08808-6A9C-422C-831E-D5395FA3519B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8101413C-546C-418A-B4C2-60C2B0FB6816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8101413C-546C-418A-B4C2-60C2B0FB6816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8101413C-546C-418A-B4C2-60C2B0FB6816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8101413C-546C-418A-B4C2-60C2B0FB6816}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2954552-AC8D-4258-91F4-7DB41D80619B}
+	EndGlobalSection
+EndGlobal

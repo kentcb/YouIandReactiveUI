@@ -1,0 +1,9 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter15.Sample02.ImageView"
+        x:TypeArguments="vms:DinosaurViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter15.Sample02;assembly=Book.ViewModels">
+    <Image
+        x:Name="image"/>
+</rxui:ReactiveUserControl>

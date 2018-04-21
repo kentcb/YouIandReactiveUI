@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Professor Alice Roberts",
+      "bio": "Alice May Roberts is an English anatomist, osteoarchaeologist, physical anthropologist, palaeopathologist, television presenter and author. She is Professor of Public Engagement in Science at the University of Birmingham.\n\nRoberts was born in Bristol in 1973, the daughter of an aeronautical engineer and an English and arts teacher. She grew up in Westbury-on-Trym where she attended Westbury C-of-E Primary School and The Red Maids' School. In December 1988 she won the BBC1 Blue Peter Young Artists competition, appearing with her picture and the presenters on the front cover of the 10 December 1988 edition of the Radio Times.\n\nShe was a medical student at University of Wales College of Medicine (then part of the University of Wales, now part of Cardiff University) and graduated in 1997 with a Bachelor of Medicine, Bachelor of Surgery (MB BCh) degree, having gained an intercalated Bachelor of Science degree in anatomy.",
+      "image_uri": "https://upload.wikimedia.org/wikipedia/commons/6/6a/12_01_2016_Alice_headshot.jpg"
+    },
+    {
+        "name": "Professor Richard Dawkins",
+        "bio": "Clinton Richard Dawkins FRS FRSL is an English ethologist, evolutionary biologist and author. He is an emeritus fellow of New College, Oxford, and was the University of Oxford's Professor for Public Understanding of Science from 1995 until 2008.",
+        "image_uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Richard_Dawkins_Cooper_Union_Shankbone.jpg/1200px-Richard_Dawkins_Cooper_Union_Shankbone.jpg"
+    },
+    {
+        "name": "Charles Darwin",
+        "bio": "Charles Robert Darwin, FRS FRGS FLS FZS was an English naturalist, geologist and biologist, best known for his contributions to the science of evolution.",
+        "image_uri": "https://www.micropia.nl/media/filer_public/e4/44/e444b0c1-4878-4aff-8701-c7275b593516/charles_darwin.jpg"
+    },
+    {
+        "name": "Stephen Jay Gould",
+        "bio": "Stephen Jay Gould was an American paleontologist, evolutionary biologist, and historian of science. He was also one of the most influential and widely read writers of popular science of his generation.",
+        "image_uri": "https://s-media-cache-ak0.pinimg.com/originals/55/c0/ad/55c0adee70359f47b39671316a3cf9cc.jpg"
+    },
+    {
+        "name": "Alfred Russel Wallace",
+        "bio": "Alfred Russel Wallace OM FRS was a British naturalist, explorer, geographer, anthropologist, and biologist.",
+        "image_uri": "https://upload.wikimedia.org/wikipedia/commons/0/03/Alfred_Russel_Wallace_engraving.jpg"
+    }
+]

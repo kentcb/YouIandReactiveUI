@@ -1,0 +1,16 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter05.Sample05.AgeView"
+        x:TypeArguments="vms:AgeViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter05.Sample05;assembly=Book.ViewModels">
+    <DockPanel>
+        <Border
+            x:Name="swatchBorder"
+            DockPanel.Dock="Left"
+            Width="8"
+            Margin="0 0 4 0"/>
+        <TextBlock
+            x:Name="displayTextBlock"/>
+    </DockPanel>
+</rxui:ReactiveUserControl>

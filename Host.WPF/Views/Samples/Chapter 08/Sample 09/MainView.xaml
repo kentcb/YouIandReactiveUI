@@ -1,0 +1,34 @@
+<rxui:ReactiveUserControl x:Class="Book.Views.Samples.Chapter08.Sample09.MainView"
+        x:TypeArguments="vms:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:vms="clr-namespace:Book.ViewModels.Samples.Chapter08.Sample09;assembly=Book.ViewModels"
+        xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:b="clr-namespace:Book.Behaviors"
+        Focusable="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Orientation="Horizontal">
+            <Button
+                x:Name="loadAHButton"
+                Content="Load A - H"/>
+            <Button
+                x:Name="loadIPButton"
+                Content="Load I - P"/>
+            <Button
+                x:Name="loadQZButton"
+                Content="Load Q - Z"/>
+        </StackPanel>
+
+        <ListBox
+            x:Name="dinosaursListBox"
+            Grid.Row="1"
+            DisplayMemberPath="."/>
+    </Grid>
+</rxui:ReactiveUserControl>
