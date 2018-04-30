@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <AssemblyName>Book.ViewModels</AssemblyName>
         <RootNamespace>Book.ViewModels</RootNamespace>
-        <TargetFrameworks>netstandard1.3;net47</TargetFrameworks>
+        <TargetFrameworks>netstandard1.3;net471</TargetFrameworks>
         <WarningsAsErrors>true</WarningsAsErrors>
         <LangVersion>latest</LangVersion>
 
