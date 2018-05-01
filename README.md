@@ -1,6 +1,6 @@
 # You, I, and ReactiveUI Samples
 
-<img src="Host.WPF/Resources/BookCover.png" alt="Book Cover" width="200"/>
+<img src="Host.WPF/Resources/BookCover.png" alt="Book Cover" width="400"/>
 
 [Buy the book](https://kent-boogaart.com/you-i-and-reactiveui/)
 
