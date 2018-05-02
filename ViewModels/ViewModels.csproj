@@ -11,7 +11,7 @@
         see https://github.com/dotnet/corefx/issues/9788
         TODO: remove this once fully netstandard
         -->
-        <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81</AssetTargetFallback>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net47'">
