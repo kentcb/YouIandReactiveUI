@@ -14,15 +14,15 @@
         <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81</AssetTargetFallback>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net47'">
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net471'">
         <DefineConstants>$(DefineConstants);NETFX</DefineConstants>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' != 'net47'">
+    <PropertyGroup Condition="'$(TargetFramework)' != 'net471'">
         <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
     </PropertyGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' != 'net47'">
+    <ItemGroup Condition="'$(TargetFramework)' != 'net471'">
         <Compile Remove="PerformanceSampleViewModel.cs" />
         <Compile Remove="Samples/Chapter 23/**" />
     </ItemGroup>
@@ -61,7 +61,7 @@
         <PackageReference Include="xunit" Version="2.2.0" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+    <ItemGroup Condition="'$(TargetFramework)' == 'net471'">
         <PackageReference Include="BenchmarkDotNet" Version="0.10.9" />
     </ItemGroup>
 
