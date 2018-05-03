@@ -15,6 +15,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -1114,9 +1115,9 @@
     <PackageReference Include="Extended.Wpf.Toolkit" Version="3.2.0" />
     <PackageReference Include="MahApps.Metro" Version="1.2.4" />
     <PackageReference Include="MahApps.Metro.Resources" Version="0.6.1" />
-    <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0113" />
-    <PackageReference Include="ReactiveUI.WPF" Version="8.0.0-alpha0113" />
-    <PackageReference Include="ReactiveUI.Events.WPF" Version="8.0.0-alpha0113" />
+    <PackageReference Include="ReactiveUI" Version="8.0.0" />
+    <PackageReference Include="ReactiveUI.WPF" Version="8.0.0" />
+    <PackageReference Include="ReactiveUI.Events.WPF" Version="8.0.0" />
     <PackageReference Include="System.Reactive" Version="3.1.1" />
     <PackageReference Include="ToastNotifications.Messages" Version="2.2.5" />
   </ItemGroup>

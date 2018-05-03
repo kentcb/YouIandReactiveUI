@@ -3,7 +3,7 @@
     <PropertyGroup>
         <AssemblyName>Book.ViewModels</AssemblyName>
         <RootNamespace>Book.ViewModels</RootNamespace>
-        <TargetFrameworks>netstandard1.3;net471</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net471</TargetFrameworks>
         <WarningsAsErrors>true</WarningsAsErrors>
         <LangVersion>latest</LangVersion>
 
@@ -11,18 +11,18 @@
         see https://github.com/dotnet/corefx/issues/9788
         TODO: remove this once fully netstandard
         -->
-        <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81</AssetTargetFallback>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net47'">
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net471'">
         <DefineConstants>$(DefineConstants);NETFX</DefineConstants>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' != 'net47'">
+    <PropertyGroup Condition="'$(TargetFramework)' != 'net471'">
         <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
     </PropertyGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' != 'net47'">
+    <ItemGroup Condition="'$(TargetFramework)' != 'net471'">
         <Compile Remove="PerformanceSampleViewModel.cs" />
         <Compile Remove="Samples/Chapter 23/**" />
     </ItemGroup>
@@ -52,8 +52,8 @@
         <PackageReference Include="Microsoft.Reactive.Testing" Version="3.1.1" />
         <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
         <PackageReference Include="PCLMock" Version="5.0.4-alpha" />
-        <PackageReference Include="ReactiveUI" Version="8.0.0-alpha0113" />
-        <PackageReference Include="ReactiveUI.Testing" Version="8.0.0-alpha0113" />
+        <PackageReference Include="ReactiveUI" Version="8.0.0" />
+        <PackageReference Include="ReactiveUI.Testing" Version="8.0.0" />
         <PackageReference Include="System.Collections.Immutable" Version="1.4.0" />
         <PackageReference Include="System.Reactive" Version="3.1.1" />
         <PackageReference Include="System.ValueTuple" Version="4.4.0" />
@@ -61,7 +61,7 @@
         <PackageReference Include="xunit" Version="2.2.0" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+    <ItemGroup Condition="'$(TargetFramework)' == 'net471'">
         <PackageReference Include="BenchmarkDotNet" Version="0.10.9" />
     </ItemGroup>
 
