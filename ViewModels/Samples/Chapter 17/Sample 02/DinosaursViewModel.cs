@@ -18,6 +18,7 @@ namespace Book.ViewModels.Samples.Chapter17.Sample02
             this.dinosaurs = Data
                 .Dinosaurs
                 .All
+                .Where(dinosaur => dinosaur.ImageResourceName != null)
                 .Select(dinosaur => new DinosaurViewModel(dinosaur, this.hostScreen))
                 .ToList();
 

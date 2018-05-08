@@ -8,6 +8,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Label
@@ -17,5 +18,9 @@
         <Label
             x:Name="dietLabel"
             Grid.Row="1"/>
+        <Image
+            x:Name="image"
+            Grid.Row="2"
+            Margin="6"/>
     </Grid>
 </rxui:ReactiveUserControl>
