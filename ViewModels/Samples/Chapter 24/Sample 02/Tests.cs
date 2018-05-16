@@ -13,7 +13,7 @@ namespace Book.ViewModels.Samples.Chapter24.Sample02
 
     [Sample(
         "Non-idiomatic ReactiveUI unit tests",
-        @"This sample demonstrates how to unit test a realistic view model (`DinosaurDetailsViewModel`) whilst forgoing any 'magic' provided by ReactiveUI. That is, dependencies are explicitly managed and the `With` extension method is not used in tests.")]
+        @"This sample demonstrates how to unit test a realistic view model (`DinosaurDetailsViewModel`) whilst forgoing any 'magic' provided by ReactiveUI. That is, dependencies are explicitly managed and the `With` extension method that [sample 24.01](24.01) relied upon is not used.")]
     public sealed class Tests : TestSampleViewModel
     {
         [Fact]

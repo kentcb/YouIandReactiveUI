@@ -12,7 +12,7 @@ namespace Book.ViewModels.Samples.Chapter24.Sample03
 
     [Sample(
         "Simplifying tests",
-        @"")]
+        @"This sample is a re-imagination of [sample 24.02](24.02) that takes good advantage of the test builder pattern to dramatically simplify tests.")]
     public sealed class Tests : TestSampleViewModel
     {
         [Fact]
