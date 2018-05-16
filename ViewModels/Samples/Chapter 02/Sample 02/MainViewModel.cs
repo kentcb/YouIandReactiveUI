@@ -18,10 +18,10 @@
         @"This sample is a Twitter client implementation that allows you to search tweets, as well as publish your own.")]
     public sealed class MainViewModel : ReactiveObject
     {
-        private const string consumerKey = "FILL THIS IN";
-        private const string consumerSecret = "FILL THIS IN";
-        private const string userAccessToken = "FILL THIS IN";
-        private const string userAccessSecret = "FILL THIS IN";
+        private const string consumerKey = "FILL_THIS_IN";
+        private const string consumerSecret = "FILL_THIS_IN";
+        private const string userAccessToken = "FILL_THIS_IN";
+        private const string userAccessSecret = "FILL_THIS_IN";
 
         private readonly ReactiveCommand<Unit, Unit> immediateSearchCommand;
         private readonly ReactiveCommand<Unit, Unit> tweetCommand;
@@ -146,7 +146,7 @@
                 .CombineLatest(
                     this.WhenAnyValue(x => x.TweetText),
                     this.attachments.CountChanged.StartWith(0),
-                    (tweetText, attachmentCount) => (!string.IsNullOrWhiteSpace(tweetText) || attachmentCount > 0) && tweetText.Length <= 140);
+                    (tweetText, attachmentCount) => (!string.IsNullOrWhiteSpace(tweetText) || attachmentCount > 0) && (tweetText?.Length ?? 0) <= 140);
 
             this.tweetCommand = ReactiveCommand
                 .CreateFromObservable(
@@ -171,7 +171,12 @@
 
             this
                 .tweetCommand
-                .Do(_ => this.TweetText = null)
+                .Do(
+                    _ =>
+                    {
+                        this.TweetText = null;
+                        this.Attachments.Clear();
+                    })
                 .Subscribe();
 
             this.errors = Observable
@@ -280,7 +285,7 @@
         {
             // This is just used for comparison - don't update this string!
             // Instead, update the constants checked below, like consumerKey and consumerSecret.
-            const string unfilled = "FILL THIS IN";
+            const string unfilled = "FILL_THIS_IN";
 
             if (consumerKey == unfilled || consumerSecret == unfilled || userAccessToken == unfilled || userAccessSecret == unfilled)
             {
