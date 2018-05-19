@@ -22,10 +22,13 @@ namespace Book.ViewModels.Data.Serializers
 
             var components = value
                 .Split(',');
+
+            var cultureInfo = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+
             return new PointF
             {
-                X = float.Parse(components[0]),
-                Y = float.Parse(components[1])
+                X = float.Parse(components[0], cultureInfo),
+                Y = float.Parse(components[1], cultureInfo)
             };
         }
 
