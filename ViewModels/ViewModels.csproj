@@ -6,12 +6,6 @@
         <TargetFrameworks>netstandard2.0;net471</TargetFrameworks>
         <WarningsAsErrors>true</WarningsAsErrors>
         <LangVersion>latest</LangVersion>
-
-        <!--
-        see https://github.com/dotnet/corefx/issues/9788
-        TODO: remove this once fully netstandard
-        -->
-        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81</AssetTargetFallback>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net471'">
