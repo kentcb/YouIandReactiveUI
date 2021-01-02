@@ -4,6 +4,8 @@
 
 [Buy the book](https://kent-boogaart.com/you-i-and-reactiveui/)
 
+[Errata](Errata.md)
+
 <br />
 <br />
 
@@ -47,7 +49,7 @@ The book provides in-depth discussion on all things ReactiveUI, giving you the k
 * Structure and Style
 
 **Part 4: Appendices**
-* Appendix A: Reactive Extensions 
+* Appendix A: Reactive Extensions
 
 On top of the extensive content and these fantastic code samples, I put a great deal of effort into typesetting the book. I think you'll agree that the result is a beautiful thing:
 
